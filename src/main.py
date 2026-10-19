@@ -14,8 +14,9 @@ def calculate_final_price(price, discount_percent, tax_percent):
     final_price = discounted_price * (1 + tax_percent / 100)
     return final_price
 
-print(calculate_final_price(1000, 10, 20))
-print(calculate_final_price(1000, 150, 20))
-print(calculate_final_price(1000, 10, -5))
-print(calculate_final_price(-100, 10, 20))
-print(calculate_final_price(2000, 15, 10))
+if __name__ == "__main__":
+    print(calculate_final_price(1000, 10, 20))
+    print(calculate_final_price(1000, 150, 20))
+    print(calculate_final_price(1000, 10, -5))
+    print(calculate_final_price(-100, 10, 20))
+    print(calculate_final_price(2000, 15, 10))
