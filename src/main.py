@@ -6,7 +6,7 @@ def _is_finite_number(value):
     except OverflowError:
         return False
 
-def convert_price(value):
+def convert_price(value: str | float | int | bool | None) -> float | None:
     if isinstance(value, bool):
         return None
 
@@ -20,7 +20,10 @@ def convert_price(value):
 
     return number
 
-def calculate_discount(price, discount_percent):
+def calculate_discount(
+    price: int | float,
+    discount_percent: int | float,
+) -> float | None:
     if isinstance(price, bool) or not isinstance(price, (int, float)):
         raise TypeError("price must be a number")
 
@@ -40,7 +43,11 @@ def calculate_discount(price, discount_percent):
 
     return price * (1 - discount_percent / 100)
 
-def calculate_final_price(price, discount_percent, tax_percent):
+def calculate_final_price(
+    price: int | float,
+    discount_percent: int | float,
+    tax_percent: int | float,
+) -> float | None:
     if isinstance(tax_percent, bool) or not isinstance(
         tax_percent, (int, float)
     ):
