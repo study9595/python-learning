@@ -10,6 +10,9 @@ def convert_price(value: str | float | int | bool | None) -> float | None:
     if isinstance(value, bool):
         return None
 
+    if value is None:
+        return None
+
     try:
         number = float(value)
     except (ValueError, TypeError, OverflowError):
@@ -78,4 +81,4 @@ if __name__ == "__main__":
     print(calculate_final_price(1000, 10, -5))
     print(calculate_final_price(-100, 10, 20))
     print(calculate_final_price(2000, 15, 10))
-    print(calculate_discount('100', 10))
+    print(calculate_discount(100, 10))
