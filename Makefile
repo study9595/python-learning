@@ -2,4 +2,4 @@
 .PHONY: check
 
 check:
-	python -m mypy src/main.py && python -m pytest
+	python -m mypy src && python -m pytest

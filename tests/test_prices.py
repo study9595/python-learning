@@ -1,5 +1,4 @@
-
-from src.main import calculate_final_price, convert_price, calculate_discount
+from src.prices import calculate_final_price, convert_price, calculate_discount
 import pytest
 
 def test_calculate_final_price():
