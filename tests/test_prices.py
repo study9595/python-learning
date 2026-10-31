@@ -70,6 +70,7 @@ def test_calculate_discount_rejects_boolean_price():
         (200, 0, 200.0),
         (200, 25, 150.0),
         (200, 100, 0.0),
+        (0, 10, 0.0),
     ],
 )
 def test_calculate_discount_parametrized(price, discount, expected):

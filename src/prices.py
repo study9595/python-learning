@@ -1,8 +1,6 @@
-
 import math
 
-
-def _is_finite_number(value):
+def _is_finite_number(value: int | float) -> bool:
     try:
         return math.isfinite(value)
     except OverflowError:
